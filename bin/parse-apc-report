@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'choice'
+require 'apc-report-parser'
+
+Choice.options do
+  option :uri do
+    short '-u'
+    long '--uri=URI'
+    desc 'The uri from which to retrieve content to parse'
+  end
+end
+
+opts = Choice.choices
+
+apc_stats_report = APCStatsReport.new(opts[:uri])
+
+require 'pp'
+pp apc_stats_report.report
+

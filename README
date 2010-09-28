@@ -1,0 +1,9 @@
+== README for APC Report Parser Library
+The APC Report Parser Library scrapes basic APC (Advanced PHP Cache) information
+from the apc.php information page provided by recent versions of APC.
+
+=== Requirements
+* Nokogiri
+* Net/HTTP
+* URI
+* Choice
