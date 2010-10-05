@@ -39,6 +39,7 @@ class APCStatsReport
       results[header.text] = extract_substats(header)
       results
     end
+    report["Memory Utilization"] = extract_memory_utilization(document)
     return report
   end
 
@@ -53,5 +54,10 @@ class APCStatsReport
       substats[label.text] = data.text
       substats
     end
+  end
+
+  def extract_memory_utilization(document)
+    output = {}
+    return output
   end
 end
